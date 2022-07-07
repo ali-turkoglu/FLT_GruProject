@@ -23,6 +23,13 @@ public class HomePage extends BasePage {
     }
 
 
+    @FindBy(xpath = "//a[.='Logout']")
+    public WebElement logoutButton;
+
+    @FindBy(linkText = "Fleet Management")
+    public WebElement fleetHomepageLink;
+
+
 
 
 }

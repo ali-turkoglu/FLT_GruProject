@@ -144,14 +144,21 @@ public class Login_StepDef {
         loginPage.inputCredentials(username,pw);
     }
 
-	/*
-	@Test
-	public void test(){
-		Driver.getDriver().get(ConfigurationReader.get("url"));
-        loginPage.usernameField.sendKeys("user1");
-        loginPage.passwordField.sendKeys("UserUser123"+Keys.ENTER);
 
-        Assert.assertEquals("user",Driver.getDriver().findElement(By.id("user-menu")).getText());
+	/*@Test
+	public void test(){
+		Driver.getDriver().get("https://www.google.com");
+        BrowserUtils.sleep(3);
+		Driver.getDriver().get("https://www.amazon.com");
+        BrowserUtils.sleep(3);
+
+        //loginPage.usernameField.sendKeys("user1");
+        //loginPage.passwordField.sendKeys("UserUser123"+Keys.ENTER);
+
+        Driver.getDriver().navigate().back();
+        BrowserUtils.sleep(3);
+
+        //Assert.assertEquals("user",Driver.getDriver().findElement(By.id("user-menu")).getText());
 
 
 	}*/

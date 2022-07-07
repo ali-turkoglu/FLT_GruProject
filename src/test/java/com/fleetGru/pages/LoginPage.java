@@ -78,5 +78,8 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath = "//span[.='Remember me on this computer']")
 	public WebElement rememberMeLink;
 
+	@FindBy(xpath = "//h2[.='Login']")
+	public WebElement loginHeader;
+
 
 }

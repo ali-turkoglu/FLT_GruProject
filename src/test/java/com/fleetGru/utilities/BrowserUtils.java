@@ -41,12 +41,12 @@ for given duration
      */
     public static void closeSpecificTab(String pageTitle){
         String newTab = "";
-        for (String window : Driver.getDriver().getWindowHandles()) {
-            Driver.getDriver().switchTo().window(window);
+        for (String each : Driver.getDriver().getWindowHandles()) {
+            Driver.getDriver().switchTo().window(each);
             if (Driver.getDriver().getTitle().equals(pageTitle)){
                 Driver.getDriver().close();
             }else{
-                newTab = window;
+                newTab = each;
             }
         }
         Driver.getDriver().switchTo().window(newTab);

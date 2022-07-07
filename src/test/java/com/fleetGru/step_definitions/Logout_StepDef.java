@@ -59,23 +59,28 @@ public class Logout_StepDef {
     @When("User opens two homepage tab")
     public void user_opens_two_homepage_tab() {
         BrowserUtils.openNewTab(ConfigurationReader.get("url"));
+        BrowserUtils.openNewTab("");
     }
 
     @When("User closes all the open tabs")
     public void user_closes_all_the_open_tabs() {
         BrowserUtils.closeSpecificTab("Dashboard");
-        &&&&&&&&&&&
-
+        BrowserUtils.closeSpecificTab("Dashboard");
     }
 
     @When("User reopen the url")
     public void user_reopen_the_url() {
-
+        //BrowserUtils.sleep(5);
+        Driver.getDriver().get(ConfigurationReader.get("url"));
+        BrowserUtils.closeSpecificTab("");
     }
 
     @Then("User can not land on the homepage")
     public void user_can_not_land_on_the_homepage() {
-
+        String unexpectedTitle="Dashboard";
+        String actualTitle=Driver.getDriver().getTitle();
+        BrowserUtils.sleep(2);
+        Assert.assertNotEquals(unexpectedTitle,actualTitle);
     }
 
 }
